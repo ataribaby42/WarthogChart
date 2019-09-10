@@ -641,4 +641,28 @@ Rudder Axis - Deadzone 6, Saturation X 94, Curvature 40</string>
       <string>Pitch and Roll axis - Deadzone 3, Curvature 20</string>
     </value>
   </item>
+  <item>
+    <key>
+      <string>font_family</string>
+    </key>
+    <value>
+      <string>Arial Narrow</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>font_size</string>
+    </key>
+    <value>
+      <string>7</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>font_height</string>
+    </key>
+    <value>
+      <string>7</string>
+    </value>
+  </item>
 </WarthogChart>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -297,7 +298,12 @@ namespace WarthogChart
             SaveFileDialog dlg = new SaveFileDialog();
             dlg.DefaultExt = ".wch";
             dlg.Filter = "Warthog Chart files (.wch)|*.wch";
-            dlg.FileName = profileFileName;
+
+            if (!string.IsNullOrEmpty(profileFileName))
+            {
+                dlg.InitialDirectory = Path.GetDirectoryName(profileFileName);
+                dlg.FileName = Path.GetFileName(profileFileName);
+            }
 
             Nullable<bool> result = dlg.ShowDialog();
 
@@ -377,6 +383,44 @@ namespace WarthogChart
             Export(controlSet is Stick);
         }
 
+        private void MenuItemSetFont_Click(object sender, RoutedEventArgs e)
+        {
+            if (controlSet == null) return;
+
+            string fontName = "Arial Narrow";
+            double fontSize = 0;
+            double fontHeight = 0;
+
+            if (controls.ContainsKey("font_family"))
+            {
+                fontName = controls["font_family"];
+            }
+
+            if (controls.ContainsKey("font_size"))
+            {
+                double.TryParse(controls["font_size"], NumberStyles.Float, CultureInfo.InvariantCulture, out fontSize);
+            }
+
+            if (fontSize <= 0)
+            {
+                fontSize = 7;
+            }
+
+            if (controls.ContainsKey("font_height"))
+            {
+                double.TryParse(controls["font_height"], NumberStyles.Float, CultureInfo.InvariantCulture, out fontHeight);
+            }
+
+            if (fontHeight <= 0)
+            {
+                fontHeight = 7;
+            }
+
+            SetFont setFont = new SetFont(this, fontName, fontSize, fontHeight);
+            setFont.Owner = this;
+            setFont.ShowDialog();
+        }
+
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (TestChanged())
@@ -424,6 +468,40 @@ namespace WarthogChart
                 {
                     controls.Add("profile_name", name.Trim());
                 }
+            }
+
+            controlSet.SetSet(controls);
+        }
+
+        public void SetFont(string fontName, double fontSize, double fontHeight)
+        {
+            if (controlSet == null) return;
+
+            if (controls.ContainsKey("font_family"))
+            {
+                controls["font_family"] = fontName;
+            }
+            else
+            {
+                controls.Add("font_family", fontName);
+            }
+
+            if (controls.ContainsKey("font_size"))
+            {
+                controls["font_size"] = fontSize.ToString(CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                controls.Add("font_size", fontSize.ToString(CultureInfo.InvariantCulture));
+            }
+
+            if (controls.ContainsKey("font_height"))
+            {
+                controls["font_height"] = fontHeight.ToString(CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                controls.Add("font_height", fontHeight.ToString(CultureInfo.InvariantCulture));
             }
 
             controlSet.SetSet(controls);

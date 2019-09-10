@@ -1,0 +1,47 @@
+﻿<Window x:Class="WarthogChart.SetFont"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarthogChart"
+       xmlns:u="clr-namespace:WarthogChart.Behaviours"
+        u:WindowBehavior.HideCloseButton="True"
+        mc:Ignorable="d"
+        Title="Set Chart Font" Height="120" Width="380" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" ShowInTaskbar="False" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" VerticalAlignment="Bottom" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Font Name" Grid.Column="0"/>
+            <TextBox x:Name="tb_name" Grid.Column="2" KeyDown="Tb_name_KeyDown"/>
+            <TextBlock Text="Size" Grid.Column="4"/>
+            <TextBox x:Name="tb_size" Grid.Column="6" KeyDown="Tb_size_KeyDown"/>
+            <TextBlock Text="Height" Grid.Column="8"/>
+            <TextBox x:Name="tb_height" Grid.Column="10" KeyDown="Tb_height_KeyDown"/>
+        </Grid>
+        <Grid Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="15,0,15,0" Margin="0,0,0,0" Click="Button_Ok_Click" />
+            <Button Grid.Column="2" Content="Cancel" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="15,0,15,0" Margin="0,0,0,0" Click="Button_Cancel_Click" />
+        </Grid>
+    </Grid>
+</Window>

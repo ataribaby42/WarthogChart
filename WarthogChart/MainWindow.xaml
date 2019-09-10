@@ -26,6 +26,8 @@
             </MenuItem>
             <MenuItem Name="menuEdit" Header="_Edit">
                 <MenuItem Name="menuNewSetChartName" Header="_Set Chart Name" Click="MenuItemSetChartName_Click"/>
+                <Separator />
+                <MenuItem Name="menuNewSetFont" Header="_Set Chart Font" Click="MenuItemSetFont_Click"/>
             </MenuItem>
             <MenuItem Name="menuView" Header="_View">
                 <MenuItem Name="menuStick" Header="_Stick" Click="MenuItemViewStick_Click" />
