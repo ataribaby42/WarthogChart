@@ -54,7 +54,7 @@ namespace WarthogChart
 
                 if (fontheight <= 0)
                 {
-                    fontheight = 7;
+                    fontheight = fontSize;
                 }
 
                 parent.SetFont(string.IsNullOrEmpty(tb_name.Text.Trim()) ? "Arial Narrow" : tb_name.Text.Trim(), fontSize, fontheight);

@@ -413,7 +413,7 @@ namespace WarthogChart
 
             if (fontHeight <= 0)
             {
-                fontHeight = 7;
+                fontHeight = fontSize;
             }
 
             SetFont setFont = new SetFont(this, fontName, fontSize, fontHeight);

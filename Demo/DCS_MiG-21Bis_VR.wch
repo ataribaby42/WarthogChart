@@ -630,7 +630,7 @@ Activate</string>
     <value>
       <string>Engine Throttle axis - Slider, Curvature 21
 
-Rudder Axis - Deadzone 6, Saturation X 94, Curvature 40</string>
+Rudder Axis - Invert, Deadzone 6, Saturation X 92, Curvature 40</string>
     </value>
   </item>
   <item>
