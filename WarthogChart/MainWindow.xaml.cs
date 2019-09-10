@@ -168,6 +168,7 @@ namespace WarthogChart
                     print = new Throttle(null);
                 }
 
+                print.Margin = new Thickness(printDlg.PrintableAreaWidth * 0.03);
                 print.LayoutTransform = transform;
                 ((IControlSet)print).SetSet(controls);
                 print.Measure(pageSize);
