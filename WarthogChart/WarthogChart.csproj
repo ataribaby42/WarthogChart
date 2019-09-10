@@ -141,5 +141,8 @@
   <ItemGroup>
     <Resource Include="Resources\joystick.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ataribaby_avatar.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

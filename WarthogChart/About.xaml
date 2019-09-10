@@ -9,6 +9,7 @@
         mc:Ignorable="d"
         Title="About" Height="320" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" ShowInTaskbar="False" Closing="Window_Closing">
     <Grid>
+        <Image Source="Resources/ataribaby_avatar.gif" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="60" Margin="117,0,117,51"/>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-50,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

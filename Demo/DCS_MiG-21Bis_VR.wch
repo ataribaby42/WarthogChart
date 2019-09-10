@@ -221,8 +221,7 @@
       <string>stick_ctrl_pitch_up</string>
     </key>
     <value>
-      <string>Down - Deadzone 3
-Curvature 20</string>
+      <string>Down</string>
     </value>
   </item>
   <item>
@@ -230,8 +229,7 @@ Curvature 20</string>
       <string>stick_ctrl_pitch_down</string>
     </key>
     <value>
-      <string>Up - Deadzone 3
-Curvature 20</string>
+      <string>Up</string>
     </value>
   </item>
   <item>
@@ -239,8 +237,7 @@ Curvature 20</string>
       <string>stick_ctrl_roll_right</string>
     </key>
     <value>
-      <string>Right - Deadzone 3
-Curvature 20</string>
+      <string>Right</string>
     </value>
   </item>
   <item>
@@ -248,8 +245,7 @@ Curvature 20</string>
       <string>stick_ctrl_roll_left</string>
     </key>
     <value>
-      <string>Left - Deadzone 3
-Curvature 20</string>
+      <string>Left</string>
     </value>
   </item>
   <item>
@@ -528,8 +524,7 @@ Activate</string>
       <string>throttle_ctrl_throttle_right</string>
     </key>
     <value>
-      <string>Engine Throttle
-Slider, Cur. 21</string>
+      <string>Engine Throttle</string>
     </value>
   </item>
   <item>
@@ -626,6 +621,24 @@ Slider, Cur. 21</string>
     </key>
     <value>
       <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_notes</string>
+    </key>
+    <value>
+      <string>Engine Throttle axis - Slider, Curvature 21
+
+Rudder Axis - Deadzone 6, Saturation X 94, Curvature 40</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_notes</string>
+    </key>
+    <value>
+      <string>Pitch and Roll axis - Deadzone 3, Curvature 20</string>
     </value>
   </item>
 </WarthogChart>
