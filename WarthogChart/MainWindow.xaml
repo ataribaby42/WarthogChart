@@ -1,0 +1,45 @@
+﻿<Window x:Class="WarthogChart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarthogChart"
+        mc:Ignorable="d"
+        Title="Warthog Chart" Height="768" Width="1024" MinHeight="600" MinWidth="800" WindowStartupLocation="CenterScreen" Background="#FFFFFF" Closing="Window_Closing" Icon="Resources/joystick.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu IsMainMenu="True" Grid.Row="0">
+            <MenuItem Name="menuFile" Header="_File">
+                <MenuItem Name="menuNew" Header="_New Chart" Click="MenuItemNew_Click"/>
+                <MenuItem Name="menuOpen" Header="_Open Chart" Click="MenuItemOpen_Click"/>
+                <MenuItem Name="menuSave" Header="_Save Chart" Click="MenuItemSave_Click"/>
+                <MenuItem Name="menuSaveAs" Header="_Save Chart As..." Click="MenuItemSaveAs_Click"/>
+                <Separator />
+                <MenuItem Name="menuExport" Header="_Export PNG" Click="MenuItemExport_Click"/>
+                <MenuItem Name="menuPrint" Header="_Print" Click="MenuItemPrint_Click"/>
+                <Separator />
+                <MenuItem Name="menuExit" Header="_Exit" Click="MenuItemExit_Click"/>
+            </MenuItem>
+            <MenuItem Name="menuEdit" Header="_Edit">
+                <MenuItem Name="menuNewSetChartName" Header="_Set Chart Name" Click="MenuItemSetChartName_Click"/>
+            </MenuItem>
+            <MenuItem Name="menuView" Header="_View">
+                <MenuItem Name="menuStick" Header="_Stick" Click="MenuItemViewStick_Click" />
+                <MenuItem Name="menuThrottle" Header="_Thrtottle" Click="MenuItemViewThrottle_Click" />
+            </MenuItem>
+            <MenuItem Name="menuHelp" Header="_Help">
+                <MenuItem Name="menuAbout" Header="_About" Click="MenuItemAbout_Click" />
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1" x:Name="grd_diagram" />
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock Name="statusBarText"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
