@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WarthogChart>
+  <item>
+    <key>
+      <string>stick_ctrl_2</string>
+    </key>
+    <value>
+      <string>Weapon Release</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_7</string>
+    </key>
+    <value>
+      <string>Target Lock On</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_8</string>
+    </key>
+    <value>
+      <string>Radar - Weather</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_10</string>
+    </key>
+    <value>
+      <string>Radar - IFF</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_9</string>
+    </key>
+    <value>
+      <string>Radar - Reset</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_15</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_19</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_17</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_18</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_16</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_1</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_6</string>
+    </key>
+    <value>
+      <string>Fire Gun</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_3</string>
+    </key>
+    <value>
+      <string>SAU cancel current mode</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_4</string>
+    </key>
+    <value>
+      <string>Wheel Brakes</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_5</string>
+    </key>
+    <value>
+      <string>SAU - Recovery</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_11</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_13</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_14</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_12</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_180</string>
+    </key>
+    <value>
+      <string>Trim Pitch Up</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_135</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_90</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_45</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_0</string>
+    </key>
+    <value>
+      <string>Trim Pitch Down</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_315</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_270</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov_225</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pitch_up</string>
+    </key>
+    <value>
+      <string>Down - Deadzone 3
+Curvature 20</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pitch_down</string>
+    </key>
+    <value>
+      <string>Up - Deadzone 3
+Curvature 20</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_roll_right</string>
+    </key>
+    <value>
+      <string>Right - Deadzone 3
+Curvature 20</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_roll_left</string>
+    </key>
+    <value>
+      <string>Left - Deadzone 3
+Curvature 20</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>profile_name</string>
+    </key>
+    <value>
+      <string>DCS MiG-21Bis VR</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_16</string>
+    </key>
+    <value>
+      <string>Engine Emerg. Air Start</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_17</string>
+    </key>
+    <value>
+      <string>Emergency Afterburner</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_31</string>
+    </key>
+    <value>
+      <string>Start Engine</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_18</string>
+    </key>
+    <value>
+      <string>Throttle
+Start/Stop</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_32</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_19</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_20</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_slider_0</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_21</string>
+    </key>
+    <value>
+      <string>Gear Handle
+Neutral</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_27</string>
+    </key>
+    <value>
+      <string>Gear Handle Lock released</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_28</string>
+    </key>
+    <value>
+      <string>Gear Handle Lock engaged</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_26</string>
+    </key>
+    <value>
+      <string>Drag Chute
+Disconnect</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_25</string>
+    </key>
+    <value>
+      <string>Landing Lights
+OFF</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_24</string>
+    </key>
+    <value>
+      <string>Landing Lights</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_23</string>
+    </key>
+    <value>
+      <string>Gear Down</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_22</string>
+    </key>
+    <value>
+      <string>Gear Up</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_30</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_29</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_0</string>
+    </key>
+    <value>
+      <string>Drop Counterm.
+ASO+SPS-141</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_45</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_90</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_135</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_180</string>
+    </key>
+    <value>
+      <string>SPRD Drop or
+ASO Drop</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_225</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_270</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>stick_ctrl_pov2_315</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_1</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_15</string>
+    </key>
+    <value>
+      <string>Drag Chute
+Activate</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_slew_y</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_slew_x</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_13</string>
+    </key>
+    <value>
+      <string>Drop Wing Fuel Pods</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_14</string>
+    </key>
+    <value>
+      <string>Drop Center Fuel Pod</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_throttle_right</string>
+    </key>
+    <value>
+      <string>Engine Throttle
+Slider, Cur. 21</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_throttle_left</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_12</string>
+    </key>
+    <value>
+      <string>TDC/Pipper -</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_11</string>
+    </key>
+    <value>
+      <string>TDC/Pipper +</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_10</string>
+    </key>
+    <value>
+      <string>Flaps Down</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_9</string>
+    </key>
+    <value>
+      <string>Flaps Up</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_8</string>
+    </key>
+    <value>
+      <string>Airbrk ON/OFF</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_7</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_2</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_4</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_3</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_6</string>
+    </key>
+    <value>
+      <string>Radio/Intercom</string>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>throttle_ctrl_5</string>
+    </key>
+    <value>
+      <string />
+    </value>
+  </item>
+</WarthogChart>
