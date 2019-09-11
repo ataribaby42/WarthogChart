@@ -4,8 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarthogChart"
-       xmlns:u="clr-namespace:WarthogChart.Behaviours"
-        u:WindowBehavior.HideCloseButton="True"
         mc:Ignorable="d"
         Title="Set Chart Font" Height="120" Width="380" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" ShowInTaskbar="False" Closing="Window_Closing">
     <Grid>

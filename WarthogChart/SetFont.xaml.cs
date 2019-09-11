@@ -20,7 +20,6 @@ namespace WarthogChart
     /// </summary>
     public partial class SetFont : Window
     {
-        private bool canClose = false;
         MainWindow parent = null;
 
         public SetFont(MainWindow parent, string fontName, double fontSize, double lineHeight)
@@ -61,26 +60,17 @@ namespace WarthogChart
                 parent.Changed = true;
             }
 
-            canClose = true;
             Close();
         }
 
         private void Button_Cancel_Click(object sender, RoutedEventArgs e)
         {
-            canClose = true;
             Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!canClose)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                parent = null;
-            }
+            parent = null;
         }
 
         private void Tb_name_KeyDown(object sender, KeyEventArgs e)

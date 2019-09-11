@@ -9,8 +9,6 @@ namespace WarthogChart
     /// </summary>
     public partial class About : Window
     {
-        private bool canClose = false;
-
         public About()
         {
             InitializeComponent();
@@ -25,13 +23,7 @@ namespace WarthogChart
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            canClose = true;
             Close();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (!canClose) e.Cancel = true;
         }
     }
 }

@@ -63,7 +63,6 @@
     <Compile Include="About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Behaviours\WindowBehaviour.cs" />
     <Compile Include="IControlSet.cs" />
     <Compile Include="SerializableDictionary.cs" />
     <Compile Include="SetFont.xaml.cs">
