@@ -285,8 +285,7 @@
       <string>throttle_ctrl_18</string>
     </key>
     <value>
-      <string>Throttle
-Start/Stop</string>
+      <string />
     </value>
   </item>
   <item>
@@ -294,7 +293,8 @@ Start/Stop</string>
       <string>throttle_ctrl_32</string>
     </key>
     <value>
-      <string />
+      <string>Throttle
+Start/Stop</string>
     </value>
   </item>
   <item>
