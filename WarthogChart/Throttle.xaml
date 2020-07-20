@@ -11,8 +11,8 @@
         <Grid Width="453" Height="605">
             <Image x:Name="img_background" Source="/WarthogChart;component/Resources/Throttle.png" />
             <Grid x:Name="grd_controls">
-                <TextBlock Text="THROTTLE" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Arial" Margin="0,31,14,0" FontWeight="Bold" />
-                <TextBlock x:Name="tb_name" TextAlignment="Right" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Arial" Margin="0,50,14,0" Width="163" Height="36" />
+                <TextBlock Text="WARTHOG THROTTLE" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Arial" Margin="0,38,7,0" FontWeight="Bold" />
+                <TextBlock x:Name="tb_name" TextAlignment="Left" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Arial" Margin="0,54,6,0" Width="163" Height="36" />
                 <TextBlock Text="Notes:" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" Margin="12,24,0,0" />
                 <TextBox x:Name="throttle_ctrl_notes" Style="{StaticResource TextBoxHOTASControl}" BorderThickness="1" BorderBrush="Black" Background="White" AcceptsReturn="True" TextBlock.LineHeight="{Binding TextLineHeight}" TextBlock.LineStackingStrategy="BlockLineHeight" TextAlignment="Left" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,37,0,0" Width="92" Height="144" />
                 <TextBox x:Name="throttle_ctrl_16" Style="{StaticResource TextBoxHOTASControl}" BorderThickness="1" BorderBrush="Black" Background="White" AcceptsReturn="True" TextBlock.LineHeight="{Binding TextLineHeight}" TextBlock.LineStackingStrategy="BlockLineHeight" TextAlignment="Left" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,14,0,0" Width="47" Height="17" />

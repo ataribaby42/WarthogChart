@@ -30,8 +30,9 @@
                 <MenuItem Name="menuNewSetFont" Header="_Set Chart Font" Click="MenuItemSetFont_Click"/>
             </MenuItem>
             <MenuItem Name="menuView" Header="_View">
-                <MenuItem Name="menuStick" Header="_Stick" Click="MenuItemViewStick_Click" />
-                <MenuItem Name="menuThrottle" Header="_Thrtottle" Click="MenuItemViewThrottle_Click" />
+                <MenuItem Name="menuStick" Header="Warthog _Stick" Click="MenuItemViewStick_Click" />
+                <MenuItem Name="menuStickHornet" Header="F/A-18 _Hornet Stick" Click="MenuItemViewStickHornet_Click" />
+                <MenuItem Name="menuThrottle" Header="Warthog _Thrtottle" Click="MenuItemViewThrottle_Click" />
             </MenuItem>
             <MenuItem Name="menuHelp" Header="_Help">
                 <MenuItem Name="menuAbout" Header="_About" Click="MenuItemAbout_Click" />

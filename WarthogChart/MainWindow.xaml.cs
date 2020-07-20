@@ -16,6 +16,7 @@ namespace WarthogChart
     /// </summary>
     public partial class MainWindow : Window
     {
+        enum device { stick, stickHornet, throttle }
         SerializableDictionary<string, string> controls = new SerializableDictionary<string, string>();
         IControlSet controlSet = null;
 
@@ -90,6 +91,21 @@ namespace WarthogChart
             grd_diagram.Children.Add(stick);
         }
 
+        private void SwitchToStickHornet()
+        {
+            if (controlSet != null)
+            {
+                UpdateControls(controlSet.GetSet());
+                controlSet.CleanUp();
+            }
+
+            grd_diagram.Children.Clear();
+            StickHornet stick = new StickHornet(this);
+            controlSet = stick;
+            controlSet.SetSet(controls);
+            grd_diagram.Children.Add(stick);
+        }
+
         private void SwitchToThrottle()
         {
             if (controlSet != null)
@@ -138,7 +154,7 @@ namespace WarthogChart
             controlSet.SetSet(controls);
         }
 
-        private void Print(bool stick)
+        private void Print(device target)
         {
             PrintDialog printDlg = new PrintDialog();
             if (printDlg.ShowDialog() == true)
@@ -158,14 +174,22 @@ namespace WarthogChart
                 */
 
                 UserControl print;
+                string name = string.Empty;
 
-                if (stick)
+                if (target == device.stick)
                 {
                     print = new Stick(null);
+                    name = "Warthog Stick";
+                }
+                else if (target == device.stickHornet)
+                {
+                    print = new StickHornet(null);
+                    name = "F/A-18 Hornet Stick";
                 }
                 else
                 {
                     print = new Throttle(null);
+                    name = "Warthog Throttle";
                 }
 
                 print.Margin = new Thickness(printDlg.PrintableAreaWidth * 0.03);
@@ -173,12 +197,15 @@ namespace WarthogChart
                 ((IControlSet)print).SetSet(controls);
                 print.Measure(pageSize);
                 print.Arrange(new Rect(0, 0, pageSize.Width, pageSize.Height));
-                printDlg.PrintVisual(print, "WarthogChart " + (print is Stick ? "Stick" : "Throttle"));
+
+
+
+                printDlg.PrintVisual(print, "WarthogChart " + name);
                 ((IControlSet)print).CleanUp();
             }
         }
 
-        private void Export(bool stick)
+        private void Export(device target)
         {
             SaveFileDialog dlg = new SaveFileDialog();
             dlg.DefaultExt = ".png";
@@ -190,9 +217,13 @@ namespace WarthogChart
             {
                 UserControl export;
 
-                if (stick)
+                if (target == device.stick)
                 {
                     export = new Stick(null);
+                }
+                else if (target == device.stickHornet)
+                {
+                    export = new StickHornet(null);
                 }
                 else
                 {
@@ -349,6 +380,13 @@ namespace WarthogChart
             SwitchToStick();
         }
 
+        private void MenuItemViewStickHornet_Click(object sender, RoutedEventArgs e)
+        {
+            if (controlSet == null) return;
+
+            SwitchToStickHornet();
+        }
+
         private void MenuItemViewThrottle_Click(object sender, RoutedEventArgs e)
         {
             if (controlSet == null) return;
@@ -369,7 +407,18 @@ namespace WarthogChart
         {
             if (controlSet == null) return;
 
-            Print(controlSet is Stick);
+            device target = device.stick;
+
+            if (controlSet is StickHornet)
+            {
+                target = device.stickHornet;
+            }
+            else if (controlSet is Throttle)
+            {
+                target = device.throttle;
+            }
+
+            Print(target);
         }
 
         private void MenuItemExit_Click(object sender, RoutedEventArgs e)
@@ -381,7 +430,18 @@ namespace WarthogChart
         {
             if (controlSet == null) return;
 
-            Export(controlSet is Stick);
+            device target = device.stick;
+
+            if (controlSet is StickHornet)
+            {
+                target = device.stickHornet;
+            }
+            else if (controlSet is Throttle)
+            {
+                target = device.throttle;
+            }
+
+            Export(target);
         }
 
         private void MenuItemSetFont_Click(object sender, RoutedEventArgs e)

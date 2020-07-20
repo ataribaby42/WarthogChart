@@ -74,6 +74,9 @@
     <Compile Include="Stick.xaml.cs">
       <DependentUpon>Stick.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StickHornet.xaml.cs">
+      <DependentUpon>StickHornet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Throttle.xaml.cs">
       <DependentUpon>Throttle.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
     <Page Include="Stick.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StickHornet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Generic.xaml">
       <SubType>Designer</SubType>
@@ -150,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ataribaby_avatar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\JoystickHornet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

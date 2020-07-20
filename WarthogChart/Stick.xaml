@@ -15,7 +15,7 @@
             </Grid.ColumnDefinitions>
             <Image x:Name="img_background" Source="/WarthogChart;component/Resources/Joystick.png" Grid.ColumnSpan="2" />
             <Grid x:Name="grd_controls" Grid.ColumnSpan="2">
-                <TextBlock Text="STICK" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" Margin="14,14,0,0" FontWeight="Bold" />
+                <TextBlock Text="WARTHOG STICK" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" Margin="14,14,0,0" FontWeight="Bold" />
                 <TextBlock x:Name="tb_name" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" Margin="14,33,0,0" Width="233" Height="35" />
                 <TextBlock Text="Notes:" FontSize="8" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" Margin="284,290,0,0" />
                 <TextBox x:Name="stick_ctrl_notes" Style="{StaticResource TextBoxHOTASControl}" BorderThickness="1" BorderBrush="Black" Background="White" AcceptsReturn="True" TextBlock.LineHeight="{Binding TextLineHeight}" TextBlock.LineStackingStrategy="BlockLineHeight" TextAlignment="Left" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="284,303,0,0" Width="152" Height="102" />
