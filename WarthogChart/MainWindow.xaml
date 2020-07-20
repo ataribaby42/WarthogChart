@@ -31,7 +31,7 @@
             </MenuItem>
             <MenuItem Name="menuView" Header="_View">
                 <MenuItem Name="menuStick" Header="Warthog _Stick" Click="MenuItemViewStick_Click" />
-                <MenuItem Name="menuStickHornet" Header="F/A-18 _Hornet Stick" Click="MenuItemViewStickHornet_Click" />
+                <MenuItem Name="menuStickHornet" Header="F/A-18C _Hornet Stick" Click="MenuItemViewStickHornet_Click" />
                 <MenuItem Name="menuThrottle" Header="Warthog _Thrtottle" Click="MenuItemViewThrottle_Click" />
             </MenuItem>
             <MenuItem Name="menuHelp" Header="_Help">

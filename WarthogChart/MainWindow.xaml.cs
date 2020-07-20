@@ -184,7 +184,7 @@ namespace WarthogChart
                 else if (target == device.stickHornet)
                 {
                     print = new StickHornet(null);
-                    name = "F/A-18 Hornet Stick";
+                    name = "F/A-18C Hornet Stick";
                 }
                 else
                 {
