@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="About" Height="320" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" ShowInTaskbar="False">
     <Grid>
-        <Image Source="Resources/ataribaby_avatar.gif" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Height="60" Margin="117,0,117,51"/>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-50,0,0">
+        <Image Source="Resources/ataribaby_avatar.gif" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="86" Stretch="Uniform" Margin="0,0,0,60"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,150">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="20"/>
