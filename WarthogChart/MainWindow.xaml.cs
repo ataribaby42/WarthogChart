@@ -84,11 +84,10 @@ namespace WarthogChart
                 controlSet.CleanUp();
             }
 
-            grd_diagram.Children.Clear();
             Stick stick = new Stick(this);
             controlSet = stick;
             controlSet.SetSet(controls);
-            grd_diagram.Children.Add(stick);
+            grd_diagram.Content = stick;
         }
 
         private void SwitchToStickHornet()
@@ -99,11 +98,10 @@ namespace WarthogChart
                 controlSet.CleanUp();
             }
 
-            grd_diagram.Children.Clear();
             StickHornet stick = new StickHornet(this);
             controlSet = stick;
             controlSet.SetSet(controls);
-            grd_diagram.Children.Add(stick);
+            grd_diagram.Content = stick;
         }
 
         private void SwitchToThrottle()
@@ -114,11 +112,10 @@ namespace WarthogChart
                 controlSet.CleanUp();
             }
 
-            grd_diagram.Children.Clear();
             Throttle throttle = new Throttle(this);
             controlSet = throttle;
             controlSet.SetSet(controls);
-            grd_diagram.Children.Add(throttle);
+            grd_diagram.Content = throttle;
         }
 
         private void Save(string fileName)

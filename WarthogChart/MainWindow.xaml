@@ -7,12 +7,18 @@
         mc:Ignorable="d"
         Title="Warthog Chart" Height="768" Width="1024" MinHeight="600" MinWidth="800" WindowStartupLocation="CenterScreen" Background="#FFFFFF" Closing="Window_Closing" Icon="Resources/joystick.ico">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Menu IsMainMenu="True" Grid.Row="0">
+        <Menu IsMainMenu="True" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
             <MenuItem Name="menuFile" Header="_File">
                 <MenuItem Name="menuNew" Header="_New Chart" Click="MenuItemNew_Click"/>
                 <MenuItem Name="menuOpen" Header="_Open Chart" Click="MenuItemOpen_Click"/>
@@ -38,8 +44,17 @@
                 <MenuItem Name="menuAbout" Header="_About" Click="MenuItemAbout_Click" />
             </MenuItem>
         </Menu>
-        <Grid Grid.Row="1" x:Name="grd_diagram" />
-        <StatusBar Grid.Row="2">
+        <TextBlock Foreground="#CCCCCC" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Zoom View: Mouse Wheel, Drag View: Hold Right Mouse Button" />
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,5,0" >
+                <TextBlock Margin="0,0,0,0" Foreground="#000000">Zoom:</TextBlock>
+                <TextBlock Margin="5,0,0,0" Foreground="#000000" Text="{Binding Path=ZoomLevel, ElementName=grd_diagram, Mode=OneWay, StringFormat='x0.'}"/>
+            </StackPanel>
+        </Grid>
+        <Slider Foreground="#000000" Grid.Column="0" Grid.Row="3" IsDirectionReversed="True" x:Name="sldZoom" Margin="5,0,5,0" Height="300" Orientation="Vertical" Minimum="1" Maximum="20" Value="{Binding ElementName=grd_diagram, Path=ZoomLevel, Mode=TwoWay}" TickPlacement="TopLeft" IsSnapToTickEnabled="True" TickFrequency="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+        </Slider>
+        <local:ScrollDragZoomControl x:Name="grd_diagram" Grid.Row="3" Grid.Column="1" />
+        <StatusBar Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Foreground="#000000" Background="#F0F0F0">
             <StatusBarItem>
                 <TextBlock Name="statusBarText"/>
             </StatusBarItem>
