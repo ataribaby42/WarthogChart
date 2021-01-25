@@ -44,7 +44,7 @@
                 <MenuItem Name="menuAbout" Header="_About" Click="MenuItemAbout_Click" />
             </MenuItem>
         </Menu>
-        <TextBlock Foreground="#CCCCCC" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Zoom View: Mouse Wheel, Drag View: Hold Right Mouse Button" />
+        <TextBlock Foreground="#CCCCCC" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Zoom View: Mouse Wheel, Drag View: Hold Left Mouse Button" />
         <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,5,0" >
                 <TextBlock Margin="0,0,0,0" Foreground="#000000">Zoom:</TextBlock>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -7,6 +8,8 @@ namespace WarthogChart
 {
     public partial class ScrollDragZoomControl : UserControl
     {
+        List<DependencyObject> hitResultsList = new List<DependencyObject>();
+
         public static readonly DependencyProperty ZoomLevelProperty = DependencyProperty.Register(
             "ZoomLevel",
             typeof(int),
@@ -49,6 +52,17 @@ namespace WarthogChart
             InitializeComponent();
         }
 
+        public void UpdateZoom()
+        {
+            ZoomLevel = ZoomLevel < 1 ? 1 : ZoomLevel;
+
+            scaleTransform.ScaleX = ZoomLevel;
+            scaleTransform.ScaleY = ZoomLevel;
+
+            var centerOfViewport = new Point(scrollViewer.ViewportWidth / 2, scrollViewer.ViewportHeight / 2);
+            lastCenterPositionOnTarget = scrollViewer.TranslatePoint(centerOfViewport, grid);
+        }
+
         private void scrollViewer_Loaded(object sender, RoutedEventArgs e)
         {
             scaleTransform = (ScaleTransform)Template.FindName("scaleTransform", this);
@@ -56,10 +70,10 @@ namespace WarthogChart
             grid = (Grid)Template.FindName("grid", this);
 
             scrollViewer.ScrollChanged += OnScrollViewerScrollChanged;
-            scrollViewer.MouseRightButtonUp += OnMouseButtonUp;
-            scrollViewer.PreviewMouseRightButtonUp += OnMouseButtonUp;
+            scrollViewer.MouseLeftButtonUp += OnMouseButtonUp;
+            scrollViewer.PreviewMouseLeftButtonUp += OnMouseButtonUp;
             scrollViewer.PreviewMouseWheel += OnPreviewMouseWheel;
-            scrollViewer.PreviewMouseRightButtonDown += OnMouseButtonDown;
+            scrollViewer.PreviewMouseLeftButtonDown += OnMouseButtonDown;
             scrollViewer.MouseMove += OnMouseMove;
         }
 
@@ -82,12 +96,48 @@ namespace WarthogChart
         void OnMouseButtonDown(object sender, MouseButtonEventArgs e)
         {
             var mousePos = e.GetPosition(scrollViewer);
-            if (mousePos.X <= scrollViewer.ViewportWidth && mousePos.Y < scrollViewer.ViewportHeight) //make sure we still can use the scrollbars
+            bool foundTextBox = false;
+            hitResultsList.Clear();
+            VisualTreeHelper.HitTest(scrollViewer, null, new HitTestResultCallback(MyHitTestResult), new PointHitTestParameters(mousePos));
+
+            for (int i = 0; i < hitResultsList.Count; i++)
             {
-                scrollViewer.Cursor = Cursors.SizeAll;
-                lastDragPoint = mousePos;
-                Mouse.Capture(scrollViewer);
+                var parent = VisualTreeHelperEx.FindVisualAncestorByType<TextBox>(hitResultsList[i]);
+
+                if (parent != null)
+                {
+                    foundTextBox = true;
+                    break;
+                }
             }
+
+            if (!foundTextBox)
+            {
+                if (mousePos.X <= scrollViewer.ViewportWidth && mousePos.Y < scrollViewer.ViewportHeight) //make sure we still can use the scrollbars
+                {
+                    scrollViewer.Cursor = Cursors.SizeAll;
+                    lastDragPoint = mousePos;
+                    Mouse.Capture(scrollViewer);
+                }
+            }
+
+            hitResultsList.Clear();
+        }
+
+        public HitTestResultBehavior MyHitTestResult(HitTestResult result)
+        {
+            // Add the hit test result to the list that will be processed after the enumeration.
+            hitResultsList.Add(result.VisualHit);
+
+            // Set the behavior to return visuals at all z-order levels.
+            return HitTestResultBehavior.Continue;
+        }
+
+        void OnMouseButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            scrollViewer.Cursor = Cursors.Arrow;
+            scrollViewer.ReleaseMouseCapture();
+            lastDragPoint = null;
         }
 
         void OnPreviewMouseWheel(object sender, MouseWheelEventArgs e)
@@ -106,24 +156,6 @@ namespace WarthogChart
             lastCenterPositionOnTarget = scrollViewer.TranslatePoint(centerOfViewport, grid);
 
             e.Handled = true;
-        }
-
-        public void UpdateZoom()
-        {
-            ZoomLevel = ZoomLevel < 1 ? 1 : ZoomLevel;
-
-            scaleTransform.ScaleX = ZoomLevel;
-            scaleTransform.ScaleY = ZoomLevel;
-
-            var centerOfViewport = new Point(scrollViewer.ViewportWidth / 2, scrollViewer.ViewportHeight / 2);
-            lastCenterPositionOnTarget = scrollViewer.TranslatePoint(centerOfViewport, grid);
-        }
-
-        void OnMouseButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            scrollViewer.Cursor = Cursors.Arrow;
-            scrollViewer.ReleaseMouseCapture();
-            lastDragPoint = null;
         }
 
         void OnScrollViewerScrollChanged(object sender, ScrollChangedEventArgs e)
